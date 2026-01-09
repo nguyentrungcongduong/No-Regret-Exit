@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán - Nghỉ việc mà không tự trách</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 32px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #1a1a1a;
+    }
+    
+    .description {
+      font-size: 15px;
+      color: #4a4a4a;
+      margin-bottom: 32px;
+    }
+    
+    .qr-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .qr-image {
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+      border: 1px solid #e0e0e0;
+      padding: 12px;
+    }
+    
+    .payment-info {
+      background: #f5f5f5;
+      padding: 20px;
+      margin-bottom: 28px;
+      border-left: 3px solid #1a1a1a;
+    }
+    
+    .payment-info p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #2a2a2a;
+    }
+    
+    .payment-info strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    
+    .highlight {
+      background: #fff9e6;
+      padding: 16px;
+      margin-bottom: 28px;
+      border: 1px solid #ffe58f;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #8b6914;
+    }
+    
+    .cta {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    
+    .cta:hover {
+      background: #2a2a2a;
+    }
+    
+    .cta:active {
+      background: #0a0a0a;
+    }
+    
+    .back-link {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      color: #4a4a4a;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💳 Trước khi nghỉ việc, hãy viết cho chính bạn 30 ngày sau – 99.000đ</h2>
+    
+    <p class="description">
+      Trang này không giúp bạn quyết định đúng hay sai.
+      <br><br>
+      Nó chỉ đảm bảo rằng sau 30 ngày,
+      bạn sẽ được nghe lại chính mình
+      – trước khi mọi thứ rối lên.
+    </p>
+    
+    <div class="qr-section">
+      <img src="qr-momo.png" alt="Momo QR Code" style="max-width: 240px; width: 100%; height: auto; margin: 0 auto; display: block; border: 1px solid #e0e0e0; padding: 8px; background: #fff;">
+      <p style="margin-top: 12px; font-size: 12px; color: #999;">
+        Quét mã để chuyển khoản
+      </p>
+      <p style="margin-top: 8px; font-size: 13px; color: #2a2a2a;">
+        <strong>Bạn không trả tiền cho chúng tôi.  
+          Bạn trả để giữ lại một phiên bản tỉnh táo của mình.</strong>
+      </p>
+    </div>
+    
+    <div class="payment-info">
+      <p><strong>Ngân hàng / Ví:</strong> Momo</p>
+      <p><strong>Số tiền:</strong> 99.000đ</p>
+      <p style="margin-top: 12px;"><strong>Nội dung chuyển khoản:</strong></p>
+      
+      <p style="margin-bottom: 12px; font-size: 13px;">
+        Nhập email của bạn:
+      </p>
+      <input type="email" id="email-input" placeholder="nguyenvana@gmail.com" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 13px; margin-bottom: 12px;">
+      
+      <p style="background: #fff9e6; padding: 8px; border-radius: 3px; font-family: monospace; font-size: 13px; color: #1a1a1a; word-break: break-all;">
+        <span id="transfer-content">NOREGRET (nhập email phía trên)</span>
+      </p>
+      <button onclick="copyToClipboard()" style="width: 100%; padding: 8px; margin-top: 8px; background: #e8e8e8; border: 1px solid #ccc; border-radius: 3px; cursor: pointer; font-size: 13px;">
+        📋 Copy nội dung
+      </button>
+    </div>
+    
+    <div class="highlight">
+      ⚠️ <strong>Quan trọng:</strong> Ghi email của bạn trong nội dung chuyển khoản (ví dụ: NOREGRET nguyenvana@gmail.com) để chúng tôi xác nhận được.
+    </div>
+    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0-IhVJ2uHJLjVTBfOCeCZYRP90RSFQlKVc4YSl5i2upjUKA/viewform?usp=publish-editor" class="cta" target="_blank">
+      ✓ Tôi đã chuyển khoản – gửi xác nhận
+    </a>
+    
+    <a href="index.html" class="back-link">← Quay lại</a>
+    
+    <p style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #e0e0e0; font-size: 12px; color: #999; text-align: center;">
+      Xác nhận trong vòng 12–24h qua email.
+    </p>
+  </div>
+
+  <script>
+    const emailInput = document.getElementById('email-input');
+    const transferContent = document.getElementById('transfer-content');
+    
+    emailInput.addEventListener('input', function() {
+      if (this.value) {
+        transferContent.textContent = 'NOREGRET ' + this.value;
+      } else {
+        transferContent.textContent = 'NOREGRET (nhập email phía trên)';
+      }
+    });
+    
+    function copyToClipboard() {
+      const text = transferContent.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('✓ Đã copy: ' + text);
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+

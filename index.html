@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nghỉ việc mà không tự trách</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 480px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px 32px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+    
+    .context {
+      font-size: 16px;
+      color: #4a4a4a;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    
+    .value {
+      margin-bottom: 32px;
+      list-style: none;
+    }
+    
+    .value-item {
+      font-size: 15px;
+      color: #2a2a2a;
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .value-item:before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #666;
+    }
+    
+    .price {
+      font-size: 18px;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      padding: 16px 0;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .price-amount {
+      font-weight: 600;
+      font-size: 22px;
+    }
+    
+    .cta {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .cta:hover {
+      background: #2a2a2a;
+    }
+    
+    .cta:active {
+      background: #0a0a0a;
+    }
+    
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+    
+    @media (max-width: 540px) {
+      .container {
+        padding: 32px 24px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Nghỉ việc mà không tự trách</h1>
+      
+      <p class="context">
+        Nếu bạn đang chuẩn bị nghỉ việc<br>
+        nhưng sợ sau này nhìn lại và tự trách mình,<br>
+        cái này dành cho bạn.
+      </p>
+    </section>
+    
+    <section class="features">
+      <ul class="value">
+        <li class="value-item">Ghi lại lý do nghỉ khi còn tỉnh táo</li>
+        <li class="value-item">30 ngày sau gửi lại để đối chiếu</li>
+        <li class="value-item">Nếu thấy sai: có lối quay lại (CV + hướng phỏng vấn nhanh)</li>
+      </ul>
+    </section>
+    
+    <section class="pricing">
+      <p class="price">
+        <span class="price-amount">99.000đ</span> – 1 lần – không subscription
+      </p>
+      
+      <a href="pay.html" class="cta">Vào việc thôi!</a>
+      
+      <p class="note">Không subscription. Không bị trừ tiền lần sau.</p>
+    </section>
+  </main>
+</body>
+</html>
